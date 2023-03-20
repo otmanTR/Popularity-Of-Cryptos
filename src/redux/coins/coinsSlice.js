@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://api.coinlore.net/api/tickers/ (First 100 Coins)';
+const url = 'https://api.coinlore.net/api/tickers/?start=1&limit=100';
 
 export const getCoins = createAsyncThunk('coins/getCoins', async () => {
   try {
@@ -15,6 +15,8 @@ export const getCoins = createAsyncThunk('coins/getCoins', async () => {
 const initialState = {
   coinList: [],
 };
+
+console.log("we are here",coinList);
 
 export const getCoinsSlice = createSlice({
   name: 'coins',
@@ -35,6 +37,8 @@ export const getCoinsSlice = createSlice({
             symbol: key.symbol,
             volume: key.volume24,
             rank: key.rank,
+            image: key.image,
+            price: key.price_usd,
           });
         });
         newState.coinList = [...newArray];
