@@ -5,12 +5,12 @@ const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&page
 
 export const getCoins = createAsyncThunk('getcoin/info', async () => {
   const response = await axios.get(url);
-  const data = Object.keys(response.data).map((key) => ({
+  const coin = Object.keys(response.data).map((key) => ({
     id: response.data[key].id,
     symbol: response.data[key].symbol,
     name: response.data[key].name,
     image: response.data[key].image,
-    C: response.data[key].current_price,
+    price: response.data[key].current_price,
     marketCap: response.data[key].market_cap,
     marketCapRank: response.data[key].market_cap_rank,
     fullyDilutedValuation: response.data[key].fully_diluted_valuation,
@@ -23,7 +23,7 @@ export const getCoins = createAsyncThunk('getcoin/info', async () => {
     marketCapChangePercentage24h: response.data[key].market_cap_change_percentage_24h,
     totalSupply: response.data[key].total_supply,
   }));
-  return data;
+  return coin;
 });
 
 const initialState = [];

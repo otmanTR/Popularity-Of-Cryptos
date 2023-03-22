@@ -1,14 +1,23 @@
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
+import { Provider } from 'react-redux';
+import Coins from './components/Coins';
+import store from './redux/store';
 
-const App = () => (
-  <>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="*" element={<div>NotFound</div>} />
-    </Routes>
-  </>
-);
+function App() {
+  return (
+    <div className="App">
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+
+            <Route path="/" element={<Coins />} />
+
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+    </div>
+  );
+}
 
 export default App;
