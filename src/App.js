@@ -1,19 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import CoinList from './pages/Home';
-import store from './redux/store';
-import { getCoins } from './redux/coins/coinsSlice';
+import Home from './pages/Home';
 
-const App = () => {
-  store.dispatch(getCoins());
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<CoinList />} />
-        <Route path="*" element={<div>NotFound</div>} />
-      </Routes>
-    </>
-  );
-};
+const App = () => (
+  <>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<div>NotFound</div>} />
+    </Routes>
+  </>
+);
 
 export default App;
