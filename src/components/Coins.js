@@ -24,7 +24,7 @@ const Coins = () => {
             name={coin.name}
             price={coin.price}
             symbol={coin.symbol}
-            image={coin.image[0]}
+            image={coin.image}
           />
         ))}
       </ul>

@@ -6,13 +6,16 @@ const Coin = ({
 }) => (
   <Link to={`/coin/${name}`} className="link">
     <li className="coin">
-      <img className="coin-image" src={image} alt={image} />
+      <img className="coinImage" src={image} alt={image} />
       <h2 className="coinName">
         {name}
         <br />
         {symbol}
       </h2>
-      <p>{price}</p>
+      <p>
+        {price}
+        $
+      </p>
     </li>
   </Link>
 );
