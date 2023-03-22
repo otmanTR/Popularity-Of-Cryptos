@@ -16,7 +16,7 @@ const initialState = {
   status: 'idle',
   error: null,
   modal: false,
-  currency: 'usd',
+  coin: 'usd',
   min: 0,
   max: 0,
 };
@@ -48,7 +48,7 @@ const coinDetailsSlice = createSlice({
     updateCoin: (state, { payload }) => ({
       ...state,
       status: 'idle',
-      currency: payload,
+      coin: payload,
     }),
   },
   extraReducers(builder) {
@@ -63,7 +63,7 @@ const coinDetailsSlice = createSlice({
         keys.forEach((key) => {
           newArray.push(payload[key]);
         });
-        state.currencyList = [...newArray];
+        state.listCoin = [...newArray];
         state.filteredList = [...newArray];
         state.status = 'successful';
       })
