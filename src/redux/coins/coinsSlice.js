@@ -1,11 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://api.coinlore.net/api/tickers/';
-
-export const getCoins = createAsyncThunk('coins/getCoins', async () => {
+export const getCoins = createAsyncThunk('coins/getCoins', async (id) => {
   try {
-    const response = await axios.get(url);
+    const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}`);
     return response.data;
   } catch (error) {
     return error.message;
@@ -21,44 +19,23 @@ const initialState = {
 export const getCoinsSlice = createSlice({
   name: 'coins',
   initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder.addCase(getCoins.fulfilled, (state, action) => {
-      state.coinList = action.payload;
-      state.status = 'succeeded';
-    });
+  reducers: {
+    selectCoins: () => initialState,
   },
-  // extraReducers(builder) {
-  //   builder
-  //     .addCase(getCoins.pending, (state) => ({
-  //       ...state,
-  //       status: 'loading',
-  //     }))
-  //     .addCase(getCoins.fulfilled, (state, action) => {
-  //       const newState = { ...state };
-  //       const newArray = [];
-  //       action.payload.forEach((data) => {
-  //         newArray.push({
-  //           id: data.id,
-  //           name: data.name,
-  //           symbol: data.symbol,
-  //           // volume: key.volume24,
-  //           // rank: key.rank,
-  //           // price: key.price_usd,
-  //         });
-  //       });
-  //       newState.coinList = [...newArray];
-  //       newState.toArray = false;
-  //       return newState;
-  //     })
-  //     .addCase(getCoins.rejected, (state, action) => ({
-  //       ...state,
-  //       status: 'failed',
-  //       error: [...state.error, action.error.message],
-  //     }));
-  // },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getCoins.pending, (state) => ({
+        ...state,
+        status: 'loading',
+      }))
+      .addCase(getCoins.fulfilled, (state, { payload }) => ({
+        ...state,
+        coinList: payload,
+        status: 'successful',
+      }));
+  },
 
 });
 
-export const selectCoins = (state) => state.coins;
+export const { selectCoins } = getCoinsSlice.actions;
 export default getCoinsSlice.reducer;

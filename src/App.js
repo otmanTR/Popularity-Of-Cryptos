@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import CoinList from './components/Coins';
+import CoinList from './pages/Home';
 import store from './redux/store';
 import { getCoins } from './redux/coins/coinsSlice';
 

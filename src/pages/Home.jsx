@@ -1,67 +1,31 @@
-// import React, { useEffect } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { getCoins, selectCoins } from '../redux/coins/coinsSlice';
-// // import Coin from '../components/Coins';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { selectCoins, getCoins } from '../redux/coins/coinsSlice';
+import Coin from '../components/Coins';
 
-// export default function Coins() {
-//   // const { coinList, status } = useSelector(selectCoins);
-//   // const dispatch = useDispatch();
+export default function Coinlist() {
+  const dispatch = useDispatch();
+  const { status, coinList } = useSelector((store) => store.details);
 
-//   // useEffect(() => {
-//   //   if (status === 'idle') {
-//   //     dispatch(getCoins());
-//   //   }
-//   //   if (status === 'succeed') {
-//   //     dispatch(getCoins());
-//   //   }
-//   // }, [status, dispatch]);
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(getCoins());
+    }
+  }, [status, dispatch]);
 
-//   // console.log('coinlist here', selectCoins);
-
-//   // return (
-//   //   <>
-//   //     <div>
-//   //       {coinList.map((coin) => (
-//   //         <Coin
-//   //           key={coin.id}
-//   //           id={coin.id}
-//   //           name={coin.name}
-//   //           price={coin.price}
-//   //           volume={coin.volume}
-//   //         />
-//   //       ))}
-//   //     </div>
-//   //   </>
-//   // );
-//   const dispatch = useDispatch();
-//   const coins = useSelector(selectCoins);
-
-//   useEffect(() => {
-//     dispatch(getCoins());
-//   }, [dispatch]);
-
-//   if (coins.status === 'loading') {
-//     return <div>Loading...</div>;
-//   }
-
-//   if (coins.error) {
-//     return (
-//       <div>
-//         Error:
-//         {' '}
-//         {coins.error}
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div>
-//       {coins.map((coin) => (
-//         <div key={coin.id}>
-//           <p>{coin.name}</p>
-//           <p>{coin.symbol}</p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
+  if (status === 'loading') return <div>loading...</div>;
+console.log(coinList);
+  return (
+    <>
+      <h2>Popularity of Cryptos in aa </h2>
+      <div>
+        {coinList.map((coin) => (
+          <Coin
+            key={coin.id}
+            name={coin.name}
+          />
+        ))}
+      </div>
+    </>
+  );
+}
