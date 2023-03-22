@@ -1,47 +1,32 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
-export default function Coin({
+export const CoinCard = ({
   name,
   image,
-  current_price,
+  price,
 }) => {
-  
-  return (
-    <>
-      <div className="coinContainer">
-        <ul>
-          <li>
-            <h3>
-              {name}
-            </h3>
-          </li>
-          <li>
-            <p>
-              {symbol}
-            </p>
-          </li>
-          <li>
-            <p>
-              {price}
-              $
-            </p>
-          </li>
-          <li>
-            <p>
-              {volume}
-              $
-            </p>
-          </li>
-        </ul>
-      </div>
-    </>
-  );
-}
+  const { coins } = useSelector((store) => store.details);
 
-Coin.propTypes = {
-  name: PropTypes.string.isRequired,
-  // price: PropTypes.string.isRequired,
-  // symbol: PropTypes.string.isRequired,
-  // volume: PropTypes.string.isRequired,
+  return (
+    <div className="coinContainer">
+      <img src={image} alt={image} className="coinImage" />
+      <h2 className="coinName">{name}</h2>
+      <p className="price">
+        Current Price:
+        <span>
+          {coins === 'usd' ? '$' : coins}
+          {price}
+        </span>
+      </p>
+    </div>
+  );
 };
+CoinCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
+
+export default CoinCard;
