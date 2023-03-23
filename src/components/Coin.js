@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const Coin = ({
-  name, price, symbol, image,
+  name, price, symbol, image, id,
 }) => (
-  <Link to={`/coin/${name}`} className="link">
+  <Link to={`/coin/${id}`} className="link">
     <li className="coin">
       <img className="coinImage" src={image} alt={image} />
       <h2 className="coinName">
@@ -25,6 +25,7 @@ Coin.propTypes = {
   price: PropTypes.string.isRequired,
   symbol: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Coin;

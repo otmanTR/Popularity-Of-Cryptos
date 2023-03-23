@@ -1,4 +1,10 @@
 import PropTypes from 'prop-types';
+import React from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { useParams } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+// import CoinInfo from './CoinInfo';
+// import { getCoins } from '../redux/coins/coinsSlice';
 
 const CoinInfo = ({
   image,
@@ -13,6 +19,20 @@ const CoinInfo = ({
   priceChange24h,
   marketCapChange24h,
   totalSupply,
+  // key={coin.id}
+  // image={coin.image}
+  // price={coin.currentPrice}
+  // name={coin.name}
+  // symbol={coin.symbol}
+  // marketCap={coin.symbol}
+  // marketCapRank={coin.marketCap}
+  // totalVolume={coin.totalVolume}
+  // high24h={coin.high24h}
+  // low24h={coin.low24h}
+  // priceChange24h={coin.priceChange24h}
+  // marketCapChange24h={coin.marketCapChange24h}
+  // marketCapChangePercentage24h={coin.marketCapChangePercentage24h}
+  // totalSupply={coin.totalSupply}
 }) => (
   <>
     <div data-testid="Details-1" className="detail-page-all">
