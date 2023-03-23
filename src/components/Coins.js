@@ -21,6 +21,7 @@ const Coins = () => {
         {coins.map((coin) => (
           <Coin
             key={coin.name}
+            id={coin.id}
             name={coin.name}
             price={coin.price}
             symbol={coin.symbol}

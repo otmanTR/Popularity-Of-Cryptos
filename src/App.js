@@ -3,11 +3,9 @@ import './App.css';
 import { Provider } from 'react-redux';
 import Coins from './components/Coins';
 import store from './redux/store';
-import CoinPage from './components/CoinPage';
+import ShowCoin from './components/ShowCoin';
 
 function App() {
-  console.log('coinpage', CoinPage);
-  console.log('coins', Coins);
   return (
     <div className="App">
       <Provider store={store}>
@@ -15,7 +13,7 @@ function App() {
           <Routes>
 
             <Route path="/" element={<Coins />} />
-            <Route path="/coin/:id" element={<CoinPage />}> </Route>
+            <Route path="/coin/:id" element={<ShowCoin />}> </Route>
           </Routes>
         </BrowserRouter>
       </Provider>

@@ -1,10 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { useParams } from 'react-router-dom';
-// import PropTypes from 'prop-types';
-// import CoinInfo from './CoinInfo';
-// import { getCoins } from '../redux/coins/coinsSlice';
 
 const CoinInfo = ({
   image,
@@ -19,109 +14,82 @@ const CoinInfo = ({
   priceChange24h,
   marketCapChange24h,
   totalSupply,
-  // key={coin.id}
-  // image={coin.image}
-  // price={coin.currentPrice}
-  // name={coin.name}
-  // symbol={coin.symbol}
-  // marketCap={coin.symbol}
-  // marketCapRank={coin.marketCap}
-  // totalVolume={coin.totalVolume}
-  // high24h={coin.high24h}
-  // low24h={coin.low24h}
-  // priceChange24h={coin.priceChange24h}
-  // marketCapChange24h={coin.marketCapChange24h}
-  // marketCapChangePercentage24h={coin.marketCapChangePercentage24h}
-  // totalSupply={coin.totalSupply}
 }) => (
   <>
-    <div data-testid="Details-1" className="detail-page-all">
-      <div className="coin-img-sec">
-        <img className="coin-img" src={image} alt={image} />
+    <div>
+      <div>
+        <img className="coinImage" src={image} alt={image} />
       </div>
-      <div className="info-text">
+      <div className="infoText">
         <p>Crypto Coin Info:</p>
       </div>
-      <ul className="detail-ul-">
-        <li className="detail-">
-          <span className="coin-name">Name:</span>
-          <span className="coin-res">
+      <ul className="detailUl">
+        <li className="detail">
+          <span className="coinName">Name:</span>
+          <span className="coinDetails">
             {name}
-            {' '}
-            <i className="fa-solid fa-circle-arrow-right" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Symbol: </span>
-          <span className="coin-res">
+          <span className="coinName">Symbol: </span>
+          <span className="coinDetails">
             {symbol}
-            {' '}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Price: </span>
-          <span className="coin-res">
+          <span className="coinName">Price: </span>
+          <span className="coinDetails">
             {price}
-            {' '}
             $
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Market Cap:</span>
-          <span className="coin-res">
+          <span className="coinNamee">Market Cap:</span>
+          <span className="coinDetails">
             {marketCap}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Market Cap Rank:</span>
-          <span className="coin-res">
+          <span className="coinName">Market Cap Rank:</span>
+          <span className="coinDetails">
             {marketCapRank}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Total Volume:</span>
-          <span className="coin-res">
+          <span className="coinName">Total Volume:</span>
+          <span className="coinDetails">
             {totalVolume}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Highest 24h:</span>
-          <span className="coin-res">
+          <span className="coinName">Highest 24h:</span>
+          <span className="coinDetails">
             {high24h}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-each-li">
-          <span className="coin-name">Lowest 24h</span>
-          <span className="coin-res">
+          <span className="coinName">Lowest 24h</span>
+          <span className="coinDetails">
             {low24h}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Price Change 24h:</span>
-          <span className="coin-res">
+          <span className="coinName">Price Change 24h:</span>
+          <span className="coinDetails">
             {priceChange24h}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Market Cap Change</span>
-          <span className="coin-res">
+          <span className="coinName">Market Cap Change</span>
+          <span className="coinDetails">
             {marketCapChange24h}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
           </span>
         </li>
         <li className="detail-">
-          <span className="coin-name">Total Supply:</span>
-          <span className="coin-res">
+          <span className="coinName">Total Supply:</span>
+          <span className="coinDetails">
             {totalSupply}
-            <i className="fa-solid fa-circle-arrow-right pl-2" />
+
           </span>
         </li>
       </ul>
@@ -130,7 +98,6 @@ const CoinInfo = ({
 );
 
 CoinInfo.propTypes = {
-
   marketCap: PropTypes.string.isRequired,
   marketCapRank: PropTypes.string.isRequired,
   totalVolume: PropTypes.string.isRequired,

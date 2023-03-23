@@ -1,29 +1,29 @@
-import React from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// import PropTypes from 'prop-types';
-import PropTypes from 'prop-types';
 import CoinInfo from './CoinInfo';
-// import { getCoins } from '../redux/coins/coinsSlice';
+import { getCoins } from '../redux/coins/coinsSlice';
 
-const ShowCoin = (props) => {
-  // const coins = useSelector((state) => state.coins);
-  // const dispatch = useDispatch();
-  const { coinParams } = useParams();
-  const { coinsInfo } = props;
-  // useEffect(() => {
-  //   if (coins.length === 0) {
-  //     dispatch(getCoins());
-  //   }
-  // }, [coins, dispatch]);
-  const oneCoin = [...coinsInfo.filter((coin) => coin.id === coinParams.id)];
+const ShowCoin = () => {
+  const coins = useSelector((state) => state.coins);
+  const dispatch = useDispatch();
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (coins.length === 0) {
+      dispatch(getCoins());
+    }
+  }, [coins, dispatch]);
+
+  const oneCoin = coins.filter((coin) => coin.id === id);
+
   return (
     <ul className="details-ul">
       {oneCoin && oneCoin.map((coin) => (
         <CoinInfo
           key={coin.id}
           image={coin.image}
-          price={coin.currentPrice}
+          price={coin.price}
           name={coin.name}
           symbol={coin.symbol}
           marketCap={coin.symbol}
@@ -39,10 +39,6 @@ const ShowCoin = (props) => {
       ))}
     </ul>
   );
-};
-
-ShowCoin.propTypes = {
-  coinsInfo: PropTypes.string.isRequired,
 };
 
 export default ShowCoin;
