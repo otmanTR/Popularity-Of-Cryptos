@@ -6,7 +6,7 @@ import Coin from './Coin';
 const Coins = () => {
   const dispatch = useDispatch();
   const coins = useSelector((state) => state.coins);
-
+  // console.log(coin)
   useEffect(() => {
     if (coins.length === 0) {
       dispatch(getCoins());
@@ -14,10 +14,12 @@ const Coins = () => {
   }, [coins, dispatch]);
 
   return (
+
     <div className="main">
+
       <h1 className="title">Crypto Coins</h1>
 
-      <ul className="coins">
+      <ul className="homeCoinList">
         {coins.map((coin) => (
           <Coin
             key={coin.name}

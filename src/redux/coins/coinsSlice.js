@@ -42,4 +42,5 @@ export const coinsSlice = createSlice({
 
 });
 
+export const { coinsFilter } = coinsSlice.actions;
 export default coinsSlice.reducer;

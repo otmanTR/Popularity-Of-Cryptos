@@ -47,42 +47,49 @@ const CoinInfo = ({
           <span className="coinNamee">Market Cap:</span>
           <span className="coinDetails">
             {marketCap}
+            $
           </span>
         </li>
         <li className="detail-">
           <span className="coinName">Market Cap Rank:</span>
           <span className="coinDetails">
             {marketCapRank}
+            st.
           </span>
         </li>
         <li className="detail-">
           <span className="coinName">Total Volume:</span>
           <span className="coinDetails">
             {totalVolume}
+            $
           </span>
         </li>
         <li className="detail-">
           <span className="coinName">Highest 24h:</span>
           <span className="coinDetails">
             {high24h}
+            $
           </span>
         </li>
         <li className="detail-each-li">
           <span className="coinName">Lowest 24h</span>
           <span className="coinDetails">
             {low24h}
+            $
           </span>
         </li>
         <li className="detail-">
           <span className="coinName">Price Change 24h:</span>
           <span className="coinDetails">
             {priceChange24h}
+            $
           </span>
         </li>
         <li className="detail-">
           <span className="coinName">Market Cap Change</span>
           <span className="coinDetails">
             {marketCapChange24h}
+            $
           </span>
         </li>
         <li className="detail-">
