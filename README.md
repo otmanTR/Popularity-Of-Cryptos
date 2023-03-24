@@ -50,7 +50,7 @@
 
 ## 🚀 Live Demo and project presentation <a name="live-demo"></a>
 
-- [Live Demo Link](coming soon)
+- [Live Demo Link](https://popularity-of-cryptos.onrender.com)
 
 
 
@@ -80,19 +80,14 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
+To install locally run git clone https://github.com/otmanTR/Popularity-Of-Cryptos.git
 
+Open the cloned repository with a code editor
 
 
 ### Install
 
-To install locally run git clone
-https://github.com/otmanTR/Popularity-Of-Cryptos.git
-
--Open the cloned directory with VSCode
-
--Install live server extension for VSCode
-
--Right click on the index.html and select open with live servers
+Open the terminal of the cloned repository and type npm install to install all dependencies
 
 
 
@@ -100,25 +95,7 @@ https://github.com/otmanTR/Popularity-Of-Cryptos.git
 
 To run tests, run the following command:
 
-For tracking linter errors locally you need to follow these steps:
-
-After cloning the project you need to run these commands
-
-- `npm install`
-
-This command will download all the dependancies of the project
-
-For tracking linter errors in HTML files run:
-
-- `npx hint .`
-
-For tracking linter errors in CSS or SASS files run:
-
-- `npx stylelint "**/*.{css,scss}`
-
-And For tracking linter errors in JavaScript files run:
-
-- `npx eslint .`
+npm test
 
 
 
@@ -167,7 +144,7 @@ If you like this project please give it a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for granting me the knowledge to do this project.
+I would like to thank Microverse and Nelson Sakwa the author of the original design for granting to suport me to do this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -191,8 +168,6 @@ I would like to thank Microverse for granting me the knowledge to do this projec
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

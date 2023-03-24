@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { FaSearch } from 'react-icons/fa';
 import { getCoins } from '../redux/coins/coinsSlice';
 import Coins from './Coins';
 import { NavBar } from './Navigation';
@@ -16,12 +17,15 @@ export const Home = () => {
   return (
     <div className="mainContainer">
       <div>
-        <h1 className="title">Crypto Coins</h1>
+
         <div className="container">
           <div>
             <NavBar />
           </div>
           <div className="year"> 2023</div>
+          <div className="title">
+            Crypto Coins
+          </div>
           <div className="searchBox">
             <input
               type="text"
@@ -29,6 +33,11 @@ export const Home = () => {
               placeholder="Search..."
               onChange={(event) => setSearch(event.target.value)}
             />
+          </div>
+          <div>
+            <button aria-label="Mute volume" type="button" className="searchButton" onChange={(e) => setSearch(e.target.value)}>
+              <FaSearch />
+            </button>
           </div>
         </div>
       </div>
