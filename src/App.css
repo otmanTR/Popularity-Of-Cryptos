@@ -1,9 +1,9 @@
-@import url('https://fonts.cdnfonts.com/css/gill-sans');
-@import url('https://fonts.googleapis.com/css?family=Lato:400');
+@import url("https://fonts.cdnfonts.com/css/gill-sans");
+@import url("https://fonts.googleapis.com/css?family=Lato:400");
 
 body {
-  background-color: rgb(147,112,219);
-  font-family: 'Gill Sans', 'lato', sans-serif;
+  background-color: rgb(147, 112, 219);
+  font-family: "Gill Sans", "lato", sans-serif;
 }
 
 .link {
@@ -11,7 +11,7 @@ body {
 }
 
 .mainContainer {
-  background-color: rgb(147,112,219);
+  background-color: rgb(147, 112, 219);
   margin-top: 50px;
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 .searchBox {
-margin-left: 20%;
+  margin-left: 20%;
 }
 
 .title {
@@ -36,16 +36,15 @@ margin-left: 20%;
   grid-template-columns: 1fr 1fr;
   list-style: none;
   margin-top: 20px;
-
 }
 
 .coin {
-width: 100%;
-border: solid white;
-border-radius: 2px;
-display: flex;
-flex-direction: column;
-align-items: center;
+  width: 100%;
+  border: solid white;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .coinName {
@@ -92,20 +91,19 @@ align-items: center;
 }
 
 .infoText {
-  color:white;
+  color: white;
 }
 
 .detail {
-  border-color: solid blanchedalmond;
+  border-color: gray;
   border-radius: 3px;
   color: white;
   margin: 10px 10px 10px 25px;
 }
 
 @media screen and (min-width: 768px) {
- .homeCoinList {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
- }
-  
+  .homeCoinList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
