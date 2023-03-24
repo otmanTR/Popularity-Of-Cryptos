@@ -30,7 +30,7 @@ const CoinInfo = ({
           {name}
           {' '}
         </li>
-        <li className="detail">
+        <li className="detail1">
           Symbol:
           {' '}
           {symbol}
@@ -43,7 +43,7 @@ const CoinInfo = ({
           {' '}
           $
         </li>
-        <li className="detail">
+        <li className="detail1">
           Market Cap:
           {' '}
           {marketCap}
@@ -57,7 +57,7 @@ const CoinInfo = ({
           {' '}
           st.
         </li>
-        <li className="detail">
+        <li className="detail1">
           Total Volume:
           {' '}
           {totalVolume}
@@ -71,7 +71,7 @@ const CoinInfo = ({
           {' '}
           $
         </li>
-        <li className="detail">
+        <li className="detail1">
           Lowest 24h:
           {' '}
           {low24h}
@@ -85,7 +85,7 @@ const CoinInfo = ({
           {' '}
           $
         </li>
-        <li className="detail">
+        <li className="detail1">
           Market Cap Change:
           {' '}
           {marketCapChange24h}

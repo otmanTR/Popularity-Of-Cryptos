@@ -6,6 +6,13 @@ body {
   font-family: "Gill Sans", "lato", sans-serif;
 }
 
+.detail1 {
+  background-color: rgb(203, 178, 253);
+  background-color: ;
+  width: 100%;
+  color: white;
+}
+
 .link {
   text-decoration: none;
 }
@@ -83,6 +90,7 @@ body {
 
 .detailContainer {
   margin-top: 50px;
+  background-color: rgb(203, 178, 253);
 }
 
 .homeCoinList a {
@@ -105,6 +113,7 @@ body {
 }
 
 .infoText {
+  background-color: rgb(203, 178, 253);
   color: white;
 }
 
