@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoinInfo Component component match with the snapshot 1`] = `
+<div
+  className="coinDetails"
+>
+  <div>
+    <img
+      className="coinImage"
+    />
+  </div>
+  <div
+    className="infoText"
+  >
+    <h2>
+      Crypto Coin Info:
+    </h2>
+  </div>
+  <ul
+    className="detailUl"
+  >
+    <li
+      className="detail"
+    >
+      Name:
+       
+       
+    </li>
+    <li
+      className="detail"
+    >
+      Symbol:
+       
+       
+    </li>
+    <li
+      className="detail"
+    >
+      Price:
+       
+       
+      $
+    </li>
+    <li
+      className="detail"
+    >
+      Market Cap:
+       
+       
+      $
+    </li>
+    <li
+      className="detail"
+    >
+      Market Cap Rank:
+       
+       
+      st.
+    </li>
+    <li
+      className="detail"
+    >
+      Total Volume:
+       
+       
+      $
+    </li>
+    <li
+      className="detail"
+    >
+      Highest 24h:
+       
+       
+      $
+    </li>
+    <li
+      className="detail"
+    >
+      Lowest 24h:
+       
+       
+      $
+    </li>
+    <li
+      className="detail"
+    >
+      Price Change 24h:
+       
+       
+      $
+    </li>
+    <li
+      className="detail"
+    >
+      Market Cap Change:
+       
+       
+      $
+    </li>
+    <li
+      className="detail"
+    >
+      Total Supply:
+       
+       
+      piece
+    </li>
+  </ul>
+</div>
+`;
