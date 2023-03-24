@@ -2,8 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400");
 
 body {
-  background-color: rgb(147, 112, 219);
+  background-color: Indigo;
   font-family: "Gill Sans", "lato", sans-serif;
+
 }
 
 .detail1 {
@@ -39,6 +40,7 @@ body {
 .navContainer {
   display: flex;
   flex-direction: row;
+  background-color: rgb(203, 178, 253);
 }
 
 .title {
@@ -85,6 +87,7 @@ body {
   display: flex;
   flex-direction: row;
   margin: 0 50px 10px 50px;
+  background-color: rgb(203, 178, 253);
 }
 
 .detailContainer {
