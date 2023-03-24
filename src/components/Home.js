@@ -5,9 +5,8 @@ import Coins from './Coins';
 import { NavBar } from './Navigation';
 
 export const Home = () => {
-  const coins = useSelector((state) => state.coins);
+  const coin = useSelector((state) => state.coins);
   const dispatch = useDispatch();
-
   const [search, setSearch] = useState('');
 
   useEffect(() => {
@@ -15,9 +14,9 @@ export const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className="all-content">
-      <div className="main-container">
-        <div className="searchSection">
+    <div>
+      <div className="container">
+        <div>
           <div>
             <NavBar />
           </div>
@@ -26,18 +25,13 @@ export const Home = () => {
               type="text"
               className="searchInput"
               placeholder="Search..."
-            />
-            <button
-              aria-label="volume"
-              type="button"
-              className="searchButton"
-              onClick={() => setSearch(search)}
+              onChange={(event) => setSearch(event.target.value)}
             />
           </div>
         </div>
       </div>
-      <div className="crypto-items">
-        <Coins coins={coins.filter((coin) => (search.toLowerCase() === '' ? coin : coin.name.toLowerCase().includes(search.toLowerCase())))} />
+      <div className="coinItems">
+        <Coins coins={coin.filter((coin) => (search.toLowerCase() === '' ? coin : coin.name.toLowerCase().includes(search.toLowerCase())))} />
 
       </div>
     </div>

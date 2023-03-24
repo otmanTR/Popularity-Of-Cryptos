@@ -25,79 +25,56 @@ const CoinInfo = ({
       </div>
       <ul className="detailUl">
         <li className="detail">
-          <span className="coinName">Name:</span>
-          <span className="coinDetails">
-            {name}
-          </span>
+          Name:
+          {name}
         </li>
-        <li className="detail-">
-          <span className="coinName">Symbol: </span>
-          <span className="coinDetails">
-            {symbol}
-          </span>
+        <li className="detail">
+          Symbol:
+          {symbol}
         </li>
-        <li className="detail-">
-          <span className="coinName">Price: </span>
-          <span className="coinDetails">
-            {price}
-            $
-          </span>
+        <li className="detail">
+          Price:
+          {price}
+          $
         </li>
-        <li className="detail-">
-          <span className="coinNamee">Market Cap:</span>
-          <span className="coinDetails">
-            {marketCap}
-            $
-          </span>
+        <li className="detail">
+          Market Cap:
+          {marketCap}
+          $
         </li>
-        <li className="detail-">
-          <span className="coinName">Market Cap Rank:</span>
-          <span className="coinDetails">
-            {marketCapRank}
-            st.
-          </span>
+        <li className="detail">
+          Market Cap Rank:
+          {marketCapRank}
+          st.
         </li>
-        <li className="detail-">
-          <span className="coinName">Total Volume:</span>
-          <span className="coinDetails">
-            {totalVolume}
-            $
-          </span>
+        <li className="detail">
+          Total Volume:
+          {totalVolume}
+          $
         </li>
-        <li className="detail-">
-          <span className="coinName">Highest 24h:</span>
-          <span className="coinDetails">
-            {high24h}
-            $
-          </span>
+        <li className="detail">
+          Highest 24h:
+          {high24h}
+          $
         </li>
-        <li className="detail-each-li">
-          <span className="coinName">Lowest 24h</span>
-          <span className="coinDetails">
-            {low24h}
-            $
-          </span>
+        <li className="detail">
+          Lowest 24h
+          {low24h}
+          $
         </li>
-        <li className="detail-">
-          <span className="coinName">Price Change 24h:</span>
-          <span className="coinDetails">
-            {priceChange24h}
-            $
-          </span>
+        <li className="detail">
+          Price Change 24h:
+          {priceChange24h}
+          $
         </li>
-        <li className="detail-">
-          <span className="coinName">Market Cap Change</span>
-          <span className="coinDetails">
-            {marketCapChange24h}
-            $
-          </span>
+        <li className="detail">
+          Market Cap Change:
+          {marketCapChange24h}
+          $
         </li>
-        <li className="detail-">
-          <span className="coinName">Total Supply:</span>
-          <span className="coinDetails">
-            {totalSupply}
-
-          </span>
+        <li className="detail">
+          Total Supply:
+          {totalSupply}
         </li>
       </ul>
     </div>

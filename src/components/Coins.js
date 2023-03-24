@@ -1,17 +1,9 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCoins } from '../redux/coins/coinsSlice';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Coin from './Coin';
 
-const Coins = () => {
-  const dispatch = useDispatch();
-  const coins = useSelector((state) => state.coins);
-  // console.log(coin)
-  useEffect(() => {
-    if (coins.length === 0) {
-      dispatch(getCoins());
-    }
-  }, [coins, dispatch]);
+const Coins = (props) => {
+  const { coins } = props;
 
   return (
 
@@ -36,3 +28,7 @@ const Coins = () => {
 };
 
 export default Coins;
+
+Coins.propTypes = {
+  coins: PropTypes.string.isRequired,
+};
