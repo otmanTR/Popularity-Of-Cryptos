@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 
 export const NavBar = () => (
   <>
-    <div>
-      <Link to="/" className="home-btn">
-        <FaChevronLeft />
-      </Link>
+    <div className="navContainer">
+      <div>
+        <Link to="/" className="home-btn">
+          <FaChevronLeft />
+        </Link>
+      </div>
+      <div className="year"> 2023</div>
     </div>
   </>
 );

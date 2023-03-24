@@ -27,10 +27,6 @@ const ShowCoin = () => {
           <div>
             <NavBar />
           </div>
-          <div className="year"> 2023</div>
-          <div className="title">
-            Crypto Coins
-          </div>
           <div className="searchBox">
             <input
               type="text"
