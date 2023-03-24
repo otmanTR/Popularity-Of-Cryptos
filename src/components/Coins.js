@@ -9,8 +9,6 @@ const Coins = (props) => {
 
     <div className="main">
 
-      <h1 className="title">Crypto Coins</h1>
-
       <ul className="homeCoinList">
         {coins.map((coin) => (
           <Coin

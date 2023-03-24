@@ -20,7 +20,7 @@ const ShowCoin = () => {
 
   return (
     <>
-      <div>
+      <div className="showBar">
         <NavBar />
       </div>
       <ul className="details-ul">

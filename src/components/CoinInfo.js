@@ -16,65 +16,88 @@ const CoinInfo = ({
   totalSupply,
 }) => (
   <>
-    <div>
+    <div className="coinDetails">
       <div>
         <img className="coinImage" src={image} alt={image} />
       </div>
       <div className="infoText">
-        <p>Crypto Coin Info:</p>
+        <h2>Crypto Coin Info:</h2>
       </div>
       <ul className="detailUl">
         <li className="detail">
           Name:
+          {' '}
           {name}
+          {' '}
         </li>
         <li className="detail">
           Symbol:
+          {' '}
           {symbol}
+          {' '}
         </li>
         <li className="detail">
           Price:
+          {' '}
           {price}
+          {' '}
           $
         </li>
         <li className="detail">
           Market Cap:
+          {' '}
           {marketCap}
+          {' '}
           $
         </li>
         <li className="detail">
           Market Cap Rank:
+          {' '}
           {marketCapRank}
+          {' '}
           st.
         </li>
         <li className="detail">
           Total Volume:
+          {' '}
           {totalVolume}
+          {' '}
           $
         </li>
         <li className="detail">
           Highest 24h:
+          {' '}
           {high24h}
+          {' '}
           $
         </li>
         <li className="detail">
-          Lowest 24h
+          Lowest 24h:
+          {' '}
           {low24h}
+          {' '}
           $
         </li>
         <li className="detail">
           Price Change 24h:
+          {' '}
           {priceChange24h}
+          {' '}
           $
         </li>
         <li className="detail">
           Market Cap Change:
+          {' '}
           {marketCapChange24h}
+          {' '}
           $
         </li>
         <li className="detail">
           Total Supply:
+          {' '}
           {totalSupply}
+          {' '}
+          piece
         </li>
       </ul>
     </div>

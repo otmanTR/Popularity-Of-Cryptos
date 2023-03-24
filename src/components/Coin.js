@@ -12,7 +12,8 @@ const Coin = ({
         <br />
         {symbol}
       </h2>
-      <p>
+      <p className="coinPrice">
+        price:
         {price}
         $
       </p>

@@ -1,12 +1,111 @@
-.searchSection {
-  display: flex;
-  flex-direction: column;
+@import url('https://fonts.cdnfonts.com/css/gill-sans');
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
+
+body {
+  background-color: rgb(147,112,219);
+  font-family: 'Gill Sans', 'lato', sans-serif;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.mainContainer {
+  background-color: rgb(147,112,219);
+  margin-top: 50px;
+}
+
+.year {
+  color: white;
+  font-size: medium;
+  margin-left: 5%;
+}
+
+.searchBox {
+margin-left: 20%;
+}
+
+.title {
+  margin-left: 35%;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.homeCoinList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  margin-top: 20px;
+
+}
+
+.coin {
+width: 100%;
+border: solid white;
+border-radius: 2px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.coinName {
+  color: blueviolet;
+  list-style: none;
+}
+
+.coinPrice {
+  background-color: blanchedalmond;
+  border-color: grey;
+  border-radius: 1px;
+  height: 25px;
+}
+
+.coinImage {
+  width: 70px;
+  height: 70px;
+  margin-top: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 50px 10px 50px;
+}
+
+.homeCoinList a {
+  text-decoration: none;
+}
+
+.coinDetails {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detailUl {
+  list-style: none;
+}
+
+.showBar {
+  margin: 50px 0 0 50px;
+}
+
+.infoText {
+  color:white;
+}
+
+.detail {
+  border-color: solid blanchedalmond;
+  border-radius: 3px;
+  color: white;
+  margin: 10px 10px 10px 25px;
+}
 
 @media screen and (min-width: 768px) {
  .homeCoinList {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
  }
   
 }

@@ -14,12 +14,14 @@ export const Home = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <div className="container">
-        <div>
+    <div className="mainContainer">
+      <div>
+        <h1 className="title">Crypto Coins</h1>
+        <div className="container">
           <div>
             <NavBar />
           </div>
+          <div className="year"> 2023</div>
           <div className="searchBox">
             <input
               type="text"
