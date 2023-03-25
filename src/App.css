@@ -1,0 +1,148 @@
+@import url('https://fonts.cdnfonts.com/css/gill-sans');
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
+
+body {
+  background-color: indigo;
+  font-family: 'Gill Sans', 'lato', sans-serif;
+  overflow-x: hidden;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.mainContainer {
+  background-color: rgb(147, 112, 219);
+  margin-top: 50px;
+}
+
+.year {
+  color: white;
+  font-size: medium;
+  margin-left: 3px;
+}
+
+.searchBox {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.searchButton {
+  width: 25px;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(203, 178, 253);
+}
+
+.title {
+  margin-left: 20%;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.homeCoinList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.coin {
+  border: solid white;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coinName {
+  color: blueviolet;
+  list-style: none;
+}
+
+.coinPrice {
+  background-color: blanchedalmond;
+  border-color: grey;
+  border-radius: 1px;
+  height: 25px;
+}
+
+.coinImage {
+  width: 70px;
+  height: 70px;
+  margin-top: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 5px 10px 5px;
+  background-color: rgb(203, 178, 253);
+}
+
+.detailContainer {
+  margin-top: 50px;
+  background-color: rgb(203, 178, 253);
+}
+
+.homeCoinList a {
+  text-decoration: none;
+}
+
+.coinDetails {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(147, 112, 219);
+  margin: 0;
+  padding: 0;
+}
+
+.details-ul {
+  margin: 0 0 0 0;
+  padding-inline-start: 0;
+}
+
+.detailUl {
+  list-style: none;
+  margin: 0 0 0 0;
+  padding-inline-start: 0;
+}
+
+.detail1 {
+  background-color: rgb(203, 178, 253);
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  width: 100vw;
+}
+
+.detail {
+  border-color: gray;
+  border-radius: 3px;
+  color: white;
+  margin: 10px 10px 10px 25px;
+  text-align: center;
+}
+
+.showBar {
+  margin: 50px 0 0 50px;
+}
+
+.infoText {
+  text-align: center;
+  background-color: rgb(203, 178, 253);
+  color: white;
+  width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+  .homeCoinList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
