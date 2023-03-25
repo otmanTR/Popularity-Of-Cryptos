@@ -17,7 +17,7 @@ export const Home = () => {
   return (
     <div className="mainContainer">
       <div>
-
+        <h1 className="mainTitle">Choose Your Coin</h1>
         <div className="container">
           <div>
             <NavBar />

@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 
 export const NavBar = () => (
   <>
+
     <div className="navContainer">
+
       <div>
         <Link to="/" className="home-btn">
           <FaChevronLeft />

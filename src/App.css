@@ -50,6 +50,11 @@ body {
   margin-top: 20px;
 }
 
+.mainTitle {
+  color: white;
+  margin-left: 20%;
+}
+
 .coin {
   border: solid white;
   border-radius: 2px;
