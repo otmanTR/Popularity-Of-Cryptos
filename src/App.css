@@ -1,15 +1,10 @@
-@import url("https://fonts.cdnfonts.com/css/gill-sans");
-@import url("https://fonts.googleapis.com/css?family=Lato:400");
+@import url('https://fonts.cdnfonts.com/css/gill-sans');
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
 
 body {
   background-color: indigo;
-  font-family: "Gill Sans", "lato", sans-serif;
-}
-
-.detail1 {
-  background-color: rgb(203, 178, 253);
-  width: 100%;
-  color: white;
+  font-family: 'Gill Sans', 'lato', sans-serif;
+  overflow-x: hidden;
 }
 
 .link {
@@ -56,7 +51,6 @@ body {
 }
 
 .coin {
-  width: 100%;
   border: solid white;
   border-radius: 2px;
   display: flex;
@@ -85,7 +79,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;
-  margin: 0 50px 10px 50px;
+  padding: 5px 5px 10px 5px;
   background-color: rgb(203, 178, 253);
 }
 
@@ -104,20 +98,27 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: rgb(147, 112, 219);
-  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.details-ul {
+  margin: 0 0 0 0;
+  padding-inline-start: 0;
 }
 
 .detailUl {
   list-style: none;
+  margin: 0 0 0 0;
+  padding-inline-start: 0;
 }
 
-.showBar {
-  margin: 50px 0 0 50px;
-}
-
-.infoText {
+.detail1 {
   background-color: rgb(203, 178, 253);
   color: white;
+  padding: 10px 0;
+  text-align: center;
+  width: 100vw;
 }
 
 .detail {
@@ -125,6 +126,18 @@ body {
   border-radius: 3px;
   color: white;
   margin: 10px 10px 10px 25px;
+  text-align: center;
+}
+
+.showBar {
+  margin: 50px 0 0 50px;
+}
+
+.infoText {
+  text-align: center;
+  background-color: rgb(203, 178, 253);
+  color: white;
+  width: 100vw;
 }
 
 @media screen and (min-width: 768px) {
